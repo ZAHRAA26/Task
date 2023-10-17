@@ -1,15 +1,27 @@
-import React from "react";
-import { TaskProvider } from "./context/TaskContext";
-import TaskList from "./pages/TaskList";
+import AddTask from "./components/AddTask";
+import RootLayout from "./components/RootLayout";
+import TasksPage from "./pages/TasksPage";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
-  return (
-    <TaskProvider>
-      <div className="App">
-        <TaskList />
-      </div>
-    </TaskProvider>
-  );
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <RootLayout />,
+      // errorElement: <Error />,
+      children: [
+        {
+          path: "tasks",
+          element: <TasksPage />,
+        },
+        {
+          path: "new",
+          element: <AddTask />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
