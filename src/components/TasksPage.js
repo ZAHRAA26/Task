@@ -2,7 +2,7 @@ import React from "react";
 import { TaskProvider } from "./context/TaskContext";
 import TaskList from "./pages/TaskList";
 
-function App() {
+function TasksPage() {
   return (
     <TaskProvider>
       <div className="App">
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default TasksPage;

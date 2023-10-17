@@ -1,0 +1,19 @@
+.task {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 48%;
+}
+
+.notstarted {
+  background-color: #ff9999;
+}
+
+.inprogress {
+  background-color: #ffff99;
+}
+
+.finished {
+  background-color: #99ff99;
+}
